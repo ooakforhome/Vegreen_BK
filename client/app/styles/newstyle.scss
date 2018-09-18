@@ -1,0 +1,118 @@
+
+html, body { height: 100%; margin:0px; padding: 0px; }
+header { clear: both; display: inline-block; position:relative; height: 100px; }
+footer { bottom: 0px; clear: both; height:100px; width: 100%; }
+h1 { text-align: center; margin-bottom: 10px; display:inline-block;}
+h2 { margin: 5px 0; padding: 0px; }
+p { margin: 0px; padding: 0px; }
+ul { list-style: none; padding: 0px; margin:0px; }
+img {width: 100%; }
+
+//--------------scss
+$left : left;
+
+
+/* col */
+.col-12 { width: percentage(12/12); float: $left;}
+.col-11 { width: percentage(11/12); float: $left;}
+.col-10 { width: percentage(10/12); float: $left;}
+.col-9 { width: percentage(9/12); float: $left;}
+.col-8 { width: percentage(8/12); float: $left;}
+.col-7 { width: percentage(7/12); float: $left;}
+.col-6 { width: percentage(6/12); float: $left;}
+.col-5 { width: percentage(5/12); float: $left;}
+.col-4 { width: percentage(4/12); float: $left;}
+.col-3 { width: percentage(3/12); float: $left;}
+.col-2 { width: percentage(2/12); float: $left;}
+.col-1 { width: percentage(1/12); float: $left;}
+
+// Inner box iCol
+.iCol-10 { width: percentage(10/10); margin: auto;}
+.iCol-9 { width: percentage(9/10); margin: auto;}
+.iCol-8 { width: percentage(8/10); margin: auto;}
+.iCol-7 { width: percentage(7/10); margin: auto;}
+.iCol-6 { width: percentage(6/10); margin: auto;}
+.iCol-5 { width: percentage(5/10); margin: auto;}
+.iCol-4 { width: percentage(4/10); margin: auto;}
+.iCol-3 { width: percentage(3/10); margin: auto;}
+.iCol-2 { width: percentage(2/10); margin: auto;}
+.iCol-1 { width: percentage(1/10); margin: auto;}
+
+// fix css
+.float-left { float: left; }
+.float-right { float: right; }
+.clear-right { clear: right; }
+
+// Header
+.nav-container { position:absolute; bottom: 0px; right: 10px; }
+.header_link { margin-left: 15px; float:left; }
+.logo_image { height: 100%; max-height: 100px; max-width: 200px;}
+
+nav ul li:hover ul{
+  display: block;
+}
+nav ul ul { display: none; background-color: rgba(255,255,255,.8);  position: fixed;   margin-top: 15px; height: 25px;}
+
+
+// Footer
+  .footer_p {
+    text-align: center;
+  }
+  .footer__copyright {
+    font-size: .7em;
+  }
+// Home
+  .g-font {
+    font-family: 'Permanent Marker', cursive;
+    margin: 0;
+    padding: 0 10%;
+    font-size: 1.5em;
+  }
+
+// Find Us
+  .find_us_form input, .find_us_form label{
+    float:left;
+  }
+  .find_us_input {
+    width: 100%;
+    margin-bottom: 5px;
+    float: left;
+  }
+  .iframe {
+    height: 500px;
+  }
+
+// MISSION
+  .mission_page {
+    width: 640px;
+    margin: auto;
+  }
+  .mission_p {
+    text-align: center;
+  }
+
+// menus
+  .text_center {
+    text-align: center;
+  }
+
+// VideoList
+  .youIframe {
+    width: 420px;
+    height: 315px;
+  }
+
+
+//=-=================================================
+.pop_cover {
+  width: 300px;
+  height: 600px;
+}
+.pop_menu {
+  position: fixed;
+  top: 0px;
+  margin: auto;
+  width: 400px;
+  height: 700px;
+  clear: both;
+}
