@@ -31,7 +31,7 @@ class VeWorld extends Component {
           <div className="col-6"><div className="iCol-7"><img alt="logo" src={this.state.img1} /></div></div>
           <div className="col-6"><div className="iCol-7"><img alt="logo" src={this.state.img2} /></div></div>
         </div>
-        <div className="col-12">
+        <div className="col-12 abc">
           <VideoList
             vid1 = {this.state.vid1}
             vid2 = {this.state.vid2}

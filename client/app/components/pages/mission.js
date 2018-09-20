@@ -6,8 +6,8 @@ class Mission extends Component {
     return(
       <div>
 
-        <div className="mission_page">
-          <h1>OUR MISSION</h1>
+        <div className="mission_page iCol-7">
+          <h1 className="">OUR MISSION</h1>
           <p className="mission_p">
             Because of our busy lifestyles, many people have forgotten how important it is to eat healthy. VeGreen wants to play the role in helping you balance both physical and mental health. We gather many different kinds of dish from around the world and fuse them into vegetarian dishes, so you can enjoy healthy meals. Moreover, our staff is carefully trained in providing you the best service while you dinning in Vegreen. We want you to relax and enjoy.
             <br/>
