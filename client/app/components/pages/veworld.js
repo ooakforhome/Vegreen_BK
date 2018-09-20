@@ -32,27 +32,9 @@ class VeWorld extends Component {
           <div className="col-6"><div className="iCol-7"><img alt="logo" src={this.state.img2} /></div></div>
         </div>
         <div className="col-12 abc">
-          <VideoList
-            vid1 = {this.state.vid1}
-            vid2 = {this.state.vid2}
-            vid3 = {this.state.vid3}
-          />
-        </div>
-        <div className="col-12">
-          <p>NEWS</p>
-          <NewsList
-            news1 = {this.state.news1}
-            news2 = {this.state.news2}
-            news3 = {this.state.news3}
-          />
-        </div>
-        <div className="col-12">
-          <p>HEALTH</p>
-          <HealthList
-            health1 = {this.state.health1}
-            health2 = {this.state.health2}
-            health3 = {this.state.health3}
-          />
+          <div className="iCol-10">
+            <iframe className="youIframe" src={vid1} />
+          </div>
         </div>
       </div>
     )

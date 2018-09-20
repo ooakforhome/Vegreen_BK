@@ -15,7 +15,7 @@ class Home extends Component {
   render(){
 
     return(
-      <div>
+      <div className="body_container">
         <img className="col-12" src={this.state.img1} />
         <div className="g-font">
           <p className="s-col-12 iCol-10">"Our task must be to free ourselves by widening our circle of compassion to embrace all living creatures and the whole of nature and its beauty"</p>

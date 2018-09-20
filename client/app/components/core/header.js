@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => (
-  <div>
     <header className="col-12 page-top">
       <div className="col-4 float-left">
         <img alt="Vegreen logo" src="https://image.ibb.co/kWFzx9/Ve_Green_Logo_update_Long.jpg" className="logo_image"/>
@@ -12,7 +11,6 @@ const Header = () => (
         <nav className="nav-container">
           <ul>
             <li className="header_link"><Link className="header_link" to="/">HOME</Link></li>
-            <li className="header_link"><Link className="header_link" to="/veworld">VeWorld</Link></li>
             <li className="header_link"><Link className="header_link" to="/menu">MENUS</Link>
               <ul className="sub_nav">
                 <li className="header_link"><Link className="header_link" to="/menu/lunch">LUNCH</Link></li>
@@ -25,7 +23,6 @@ const Header = () => (
         </nav>
       </div>
     </header>
-  </div>
 );
 
 export default Header;
