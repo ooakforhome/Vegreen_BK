@@ -24,12 +24,12 @@ class LunchPopup extends Component {
     render() {
         return (
             <section>
-              <img alt="Lunch" src="../assets/img/Set_Menu.jpg" onClick={() => this.openModal()}/>
+            <img alt="MENU" src="../assets/img/Dinner_Menu.jpg" onClick={() => this.openModal()} />
                 <input type="button" value="Open" onClick={() => this.openModal()} />
-                <Modal visible={this.state.visible} width="400" height="700" effect="fadeInUp" onClickAway={() => this.closeModal()}>
+                <Modal visible={this.state.visible} width="40%" height="100%" effect="fadeInUp" onClickAway={() => this.closeModal()}>
                     <div>
-                        <h1>LUNCH</h1>
-                        <img alt="Lunch" src="../assets/img/Soft_Lunch.jpg" />
+                        <h1>MENU</h1>
+                        <img alt="MENU" src="../assets/img/Menu_01.jpg" />
                         <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
                     </div>
                 </Modal>

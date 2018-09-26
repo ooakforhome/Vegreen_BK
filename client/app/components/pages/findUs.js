@@ -37,6 +37,7 @@ class FindUs extends Component {
         <div className="col-12 findUs_container">
           <div className="s-iCol-8 iCol-6">
             <form className="col-12 find_us_form" onSubmit={this.handEmailSubmit.bind(this)}>
+              <h2>LEAVE US A MESSAGE</h2>
               <div className="find_us_input">
                 <label className="col-2">Name :</label>
                 <input className="col-9" type="text" name="name" value={this.props.name} onChange={this.onChanges.bind(this)}/>
@@ -51,7 +52,7 @@ class FindUs extends Component {
               </div>
               <div className="find_us_input">
                 <label className="col-2">Message :</label>
-                <input className="col-9" type="field" name="text" value={this.props.text} onChange={this.onChanges.bind(this)}/>
+                <input className="col-9" type="field" name="message" value={this.props.message} onChange={this.onChanges.bind(this)}/>
               </div>
               <div className="submit_button">
                 <input className="float-right" type="submit" name="submit" />

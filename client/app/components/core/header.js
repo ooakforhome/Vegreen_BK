@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => (
-    <header className="col-12 page-top">
+    <header className="page-top">
       <div className="col-4 float-left">
         <img alt="Vegreen logo" src="https://image.ibb.co/kWFzx9/Ve_Green_Logo_update_Long.jpg" className="logo_image"/>
       </div>
