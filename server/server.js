@@ -57,6 +57,8 @@ if (isDev) {
     res.end();
   });
 }
+  const imgRoute = require('./routes/api/imageRoute');
+  app.use(imgRoute);
 
 app.listen(port, '0.0.0.0', (err) => {
   if (err) {

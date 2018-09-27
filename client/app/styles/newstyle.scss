@@ -138,6 +138,7 @@ nav ul ul { display: none; background-color: rgba(255,255,255,.8);  position: fi
     clear: both;
     float:left;
   }
+  img.mag_img {height: 180px; width:auto; margin: 0 15%;}
   .menu-thumb:hover { opacity: .8; }
   .menu-thumb img { width: 90%; border: 1px solid rgba(0,0,0,0.3);}
   .menu-thumb p { width: 100%; text-align: center; margin-bottom: 20px;}
@@ -196,7 +197,7 @@ nav ul ul { display: none; background-color: rgba(255,255,255,.8);  position: fi
   .s-iCol-1 { width: percentage(1/10); margin: auto;}
 
   .s-image { width: 90%; margin: 5%;}
-  .title_logo { width: 180px; height: 240px; margin:auto; }
+  .title_logo { width: 180px; height: 200px; padding-top: 10px; margin:auto; }
 
   .display-hide { display: none;}
   .body_container { height: auto; }

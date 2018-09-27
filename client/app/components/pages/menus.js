@@ -35,7 +35,7 @@ class Menus extends Component {
         <div className="menu_title s-iCol-10 iCol-8">
           <div className="s-col-12 col-4">
             <div className="title_logo">
-              <img alt="2017" src={this.state.magzImg}/>
+              <img className="mag_img" alt="2017" src={this.state.magzImg}/>
             </div>
           </div>
           <div className="s-col-12 col-4">
