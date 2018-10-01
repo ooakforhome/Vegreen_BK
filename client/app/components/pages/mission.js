@@ -13,7 +13,7 @@ class Mission extends Component {
     return(
       <div className="body_container">
         <div className="col-3"><img src="" alt=""/></div>
-        <div className="mission_page s-iCol-12 col-6">
+        <div className="mission_page s-iCol-10 col-6">
           <img alt="vegreen_mission_img" src={this.state.vegreenImg}/>
           <h1 className="">OUR MISSION</h1>
           <p className="mission_p">
