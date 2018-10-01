@@ -26,8 +26,10 @@
     "crypto": "^1.0.1",
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
+    "fn": "^0.2.0",
     "fs": "0.0.1-security",
     "googleapis": "^27.0.0",
+    "gridfs-stream": "^1.1.1",
     "html-webpack-plugin": "^3.1.0",
     "jimp": "^0.5.3",
     "lodash": "^4.17.11",
@@ -58,6 +60,7 @@
   },
   "devDependencies": {
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "mini-css-extract-plugin": "^0.4.3"
+    "mini-css-extract-plugin": "^0.4.3",
+    "multer-gridfs-storage": "^3.2.3"
   }
 }

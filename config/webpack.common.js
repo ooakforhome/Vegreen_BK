@@ -36,6 +36,11 @@ module.exports = {
         include: helpers.root('client'),
         loader: 'babel-loader'
       },
+      {
+        test: /\.json$/,
+        exclude: /(node_modules)/,
+        loader: "json-loader"
+      },
       // SCSS files
       {
         test: /\.scss$/,
