@@ -57,14 +57,12 @@ if (isDev) {
     res.end();
   });
 }
-  // const imgRoute = require('./routes/api/imageRoute');
-  // app.use(imgRoute);
 
 app.listen(port, '0.0.0.0', (err) => {
   if (err) {
     console.log(err);
   }
-  console.log("USER PORT ============ port =============");
+  console.log("USER PORT ============ "+ port +" =============");
   console.info('>>> 🌎 Open http://0.0.0.0:%s/ in your browser.', port);
 });
 
