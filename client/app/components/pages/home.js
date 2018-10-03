@@ -6,8 +6,8 @@ class Home extends Component {
     super(props);
     this.state = {
       img1: '/api/image/SS006.JPG',
-      img2: "../assets/img/SS007.jpg",
-      img3: "../assets/img/SS008.jpg",
+      img2: "/api/image/SS007.jpg",
+      img3: "/api/image/SS008.jpg",
     }
   }
 

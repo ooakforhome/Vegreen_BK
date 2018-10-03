@@ -35,7 +35,7 @@ componentWillMount(){
 
     return(
       <div>
-        <p>{images.filename}</p>
+        <p>{this.props.images}</p>
       </div>
     )
   }

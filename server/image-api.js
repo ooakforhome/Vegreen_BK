@@ -46,19 +46,7 @@ const storage = new GridFsStorage({
 
 const upload = multer({ storage }).single('file');
 
-// load Images
-router.get('/api/files', (req, res) =>{
-  gfs.files.find().toArray((err, files)=>{
-    // Check if files
-    if(!files || files.length === 0) {
-      return res.status(404).json({
-        err: 'No files exist'
-      });
-    }
-    //Files exist
-    return res.json(files);
-  });
-});
+
 
 // upload images
 router.post('/api/upload/', upload, (req, res) => {
@@ -90,5 +78,19 @@ router.get('/api/image/:filename', (req, res) =>{
   })
 });
 
+// load Images
+router.get('/api/files', (req, res) =>{
+  gfs.files.find().toArray((err, files)=>{
+    // Check if files
+    if(!files || files.length === 0) {
+      return res.status(404).json({
+        err: 'No files exist'
+      });
+    }
+    //Files exist
+    return res.json(files);
+    console.log("readely")
+  });
+});
 
 module.exports = router;
