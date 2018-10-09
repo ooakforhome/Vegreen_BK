@@ -3,6 +3,11 @@ const creds = require('./creds');
 const router = require('express').Router();
 const Contact = require('../../models/Contact');
 
+
+// for no ssl option
+//port: 587,
+//secure: false
+
 var transport = {
   host: 'smtp.gmail.com',
   auth: {
@@ -27,13 +32,12 @@ transporter.verify((error, success) => {
     var name = req.body.name
     var email = req.body.email
     var message = req.body.message
-    var content = `name: ${name} \n email: ${email} \n message: ${message} `
 
     var mail = {
       from: 'vegreenfusion02@gmail.com',
       to: 'vegreenfusion02@gmail.com',
       subject: `Vegreen Message: ${name}`,
-      text: `from: ${email} \n Message: ${message}`
+      text: `Name: ${name} \n E-Mail: ${email} \n Message: ${message}`
     }
     Contact.create(req.body)
     transporter.sendMail(mail, (err, data) => {
