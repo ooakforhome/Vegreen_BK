@@ -15,20 +15,20 @@ class MailBox extends Component {
   }
 
   handleSubmit(e){
-      e.preventDefault();
-      axios.post("/api/send", {
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message
-      })
-        .then((response)=>{
-          if (response.data.msg === 'success'){
-              alert("Message Sent.");
-              this.resetForm()
-          }else if(response.data.msg === 'fail'){
-              alert("Message failed to send.")
-          }
-      })
+    e.preventDefault();
+    axios.post("/api/send", {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    })
+      .then((response)=>{
+        if (response.data.msg === 'success'){
+            alert("Message Sent.");
+            this.resetForm()
+        }else if(response.data.msg === 'fail'){
+            alert("Message failed to send.")
+        }
+    })
   }
 
 
