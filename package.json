@@ -50,5 +50,8 @@
     "webpack-hot-middleware": "^2.24.2",
     "webpack-merge": "^4.1.4",
     "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^2.0.0"
   }
 }

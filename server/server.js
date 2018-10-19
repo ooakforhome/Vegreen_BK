@@ -11,7 +11,7 @@ const config = require('../config/config');
 const webpackConfig = require('../webpack.config');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const port  = process.env.PORT || 3008;
+const port  = process.env.PORT || 7070;
 
 
 // Configuration
@@ -60,10 +60,14 @@ if (isDev) {
 }
 
 // image router
-const imageAPI = require("./routes/api/image-api");
-app.use('/', imageAPI);
-// end image router
-// mail router
+// const imageAPI = require("./image-api");
+// app.use('/', imageAPI);
+
+// api/image/router
+// const imageAPI = require("./routes/api/image-api");
+// app.use('/', imageAPI);
+
+
 const mailAPI = require("./routes/mailRoute/mailTrans");
 app.use('/', mailAPI)
 // end mail router

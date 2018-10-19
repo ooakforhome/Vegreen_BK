@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ImgBox from "./imgBox";
 import data from './dataImg';
+import axios from 'axios';
 // import './sty.scss';
 
 

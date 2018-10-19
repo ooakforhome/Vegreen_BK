@@ -5,14 +5,19 @@ const GridFsStorage = require('multer-gridfs-storage');
 const Grid = require('gridfs-stream');
 const express = require('express');
 const bodyParser = require('body-parser');
-const router = require('express').Router();
+// const router = require('express').Router();
 const axios = require('axios');
+const mongodb = require('mongodb');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const config = require('../config/config');
+const config = require('../../../config/config');
 const mongoURI = config.db;
+// const conn = mongoose.createConnection(mongoURI);
 const conn = mongoose.createConnection(mongoURI);
+
+const client = mongodb.MongoClient;
+
 
 let gfs;
 
@@ -46,17 +51,19 @@ const storage = new GridFsStorage({
 
 const upload = multer({ storage }).single('file');
 
+module.exports = (app) => {
+
 // Upload images
-router.post('/api/upload/', upload, (req, res) => {
+app.post('/api/upload', upload, (req, res)=>{
     console.log("<<=======================>>");
     console.log(req.file)
     console.log("<<=======================>>");
     console.log(req.file.filename)
-  // axios.put('/api/products' + id, {"images" : res.req.file.id});
 });
 
+
 // Get single image
-router.get('/api/image/:filename', (req, res) =>{
+app.get('/api/image/:filename', (req, res) =>{
   gfs.files.findOne({filename: req.params.filename}, (err, file) => {
     if(!file || file.length === 0) {
       return res.status(404).json({
@@ -76,27 +83,72 @@ router.get('/api/image/:filename', (req, res) =>{
   })
 });
 
-//================================
-// Get All Image files
-router.get('/api/aliimages', (req, res, next) => {
-  gfs.files.find()
-    .exec()
-    .then((data) => res.json(data))
-    .catch((err) => next(err));
+// Get all files
+app.get('/api/afiles', (req, res) =>{
+  gfs.files.find().toArray((err, files)=>{
+    // Check if files
+    if(!files || files.length === 0) {
+      return res.status(404).json({
+        err: 'No files exist'
+      });
+    }
+    //Files exist
+    return res.json(files);
+  });
 });
 
-// Get All Image files
-router.get('/api/allimages', (req, res, next) => {
-  uploads.files.find()
-    .exec()
-    .then((data) => res.json(data))
-    .catch((err) => next(err));
+
+// get all chunks
+// Not working
+app.get('/api/aafiles', (req, res) =>{
+  gfs.chunks.find().toArray((err, chunks)=>{
+    // Check if chunks
+    if(!chunks || chunks.length === 0) {
+      return res.status(404).json({
+        err: 'No chunks exist'
+      });
+    }
+    //Files exist
+    return res.json(chunks);
+  });
 });
 
-// Get All Image files
-router.get('/api/albimages', (req, res, next) => {
-  uploads.files.find()
-    .then(data => {return "hello"})
+
+
+// delete one by ID
+// working
+app.delete('/api/findinfo/:objid', (req, res)=>{
+  gfs.files.deleteOne({_id: new mongodb.ObjectID(req.params.objid)}, (err, file) => {
+    return res.json(file);
+  })
 });
 
-module.exports = router;
+// Find one by ID
+//workding
+app.get('/api/findinfo/:objid', (req, res)=>{
+  gfs.files.findOne({_id: new mongodb.ObjectID(req.params.objid)}, (err, file) => {
+    console.log("<================== some info ========================>")
+    return res.json(file);
+  })
+});
+
+// Delete a file
+app.delete('/api/delete/:filename', (req, res) =>{
+  gfs.files.findOne({filename: req.params.filename}, (err, file) => {
+    if(!file || file.length === 0) {
+      return res.status(404).json({
+        err: 'No files exist'
+      });
+    } else {
+      gfs.files.deleteOne({filename: req.params.filename}, (info) => {
+        console.log("deteled")
+        console.log(res.json({info: "delete complete"}))
+      })
+    }
+  })
+});
+
+
+
+}; //end module
+              srcSet={picture+' 1x, '+picture2+' 2x, '+picture3 +' 3x'}
