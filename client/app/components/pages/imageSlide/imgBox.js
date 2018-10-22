@@ -2,12 +2,11 @@ import React from 'react';
 
 
 const ImgBox = ({property}) => {
-    const { index, picture, picture2, picture3 } = property;
+    const { index, picture, picture1, picture2 } = property;
     return (
         <div id={`image-${index}`} className="image">
             <img
-              src={picture}
-                 srcset={picture+' 480w, '+picture2+' 760w, '+picture3 +' 1920w'}
+              src={picture2}
               alt={index} />
             <div className="details">
                 <span className="index">{index+1}</span>
