@@ -2,6 +2,7 @@ const nodemailer = require('nodemailer');
 const creds = require('./creds');
 const router = require('express').Router();
 const Contact = require('../../models/Contact');
+const axios = require('axios');
 
 var transport = {
   host: 'smtp.gmail.com',
@@ -34,7 +35,7 @@ transporter.verify((error, success) => {
       subject: `Vegreen Message: ${name}`,
       text: `Name: ${name} \nE-Mail: ${email} \nMessage: ${message}`
     }
-    Contact.create(req.body)
+    axios.post("/api/newcontact", req.body)
     transporter.sendMail(mail, (err, data) => {
       if (err) {
         res.json({
