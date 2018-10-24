@@ -34,7 +34,7 @@ class Footer extends Component {
           </div>
           <p className="footer__copyright">© 2016 by VeGreen. Vegetarian Fusion Restaurant</p>
         </div>
-        <div className="col-4 float-left footer-mid">.</div>
+        <div className="col-4 float-left footer-mid"><p>.</p></div>
         <div className="col-4 s-col-6 float-left ">
           <div className="col-12 s-col-12 footer_p">
             <h2>HOURS:</h2>
@@ -48,12 +48,7 @@ class Footer extends Component {
               <li>Sun: 11AM to 9PM</li>
             </ul>
           </div>
-          <div className="ssLarge col-12 s-col-12 footer_p">
-            <a href={this.state.fb}><img className="col-3 ss-icon" alt="fb" src={this.state.fbLogo} /></a>
-            <a href={this.state.in}><img className="col-3 ss-icon" alt="in" src={this.state.inLogo} /></a>
-            <a href={this.state.gplus}><img className="col-3 ss-icon" alt="gplus" src={this.state.gplusLogo} /></a>
-            <a href={this.state.tweet}><img className="col-3 ss-icon" alt="tweet" src={this.state.tweetLogo} /></a>
-          </div>
+
         </div>
       </footer>
     )
