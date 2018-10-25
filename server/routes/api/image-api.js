@@ -10,6 +10,7 @@ const axios = require('axios');
 const mongodb = require('mongodb');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const ImageModel = require('../../models/Image_model');
 
 const config = require('../../../config/config');
 const mongoURI = config.db;
@@ -58,9 +59,20 @@ app.post('/api/upload', upload, (req, res)=>{
     console.log("<<=======================>>");
     console.log(req.file)
     console.log("<<=======================>>");
-    console.log(req.file.filename)
-    return res.json({upload: req.file.filename})
+    let newImage = new ImageModel({
+      imageId: req.file.id,
+      length: req.file.length,
+      chunkSize: req.file.chunkSize,
+      uploadDate: req.file.uploadDate,
+      filename: req.file.filename,
+      md5: req.file.md5,
+      contentType: req.file.contentType,
+    });
+    newImage.save()
+      .then(() => console.log("uploaded"));
+    return res.json({upload: req.file});
 });
+
 
 
 // Delete image files and chunks
