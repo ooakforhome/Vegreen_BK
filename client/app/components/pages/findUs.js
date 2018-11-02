@@ -45,7 +45,7 @@ import React, {Component} from 'react'; import axios from "axios"; class FindUs 
             Restaurant&amp;showZoom=true&amp;showStreetView=true&amp;showMapType=true">
           </iframe>
         </div>
-        <div className="ssLarge iCol-6 s-col-12 footer_p">
+        <div className="ssLarge iCol-8 s-col-12 footer_p">
           <a href={this.state.fb}><img className="col-3 ss-icon" alt="fb" src={this.state.fbLogo} /></a>
           <a href={this.state.in}><img className="col-3 ss-icon" alt="in" src={this.state.inLogo} /></a>
           <a href={this.state.gplus}><img className="col-3 ss-icon" alt="gplus" src={this.state.gplusLogo}
@@ -54,7 +54,7 @@ import React, {Component} from 'react'; import axios from "axios"; class FindUs 
 /></a>
         </div>
         <div className="col-12 findUs_container">
-          <div className="s-iCol-8 iCol-6">
+          <div className="s-iCol-10 iCol-8">
             <form id="contact-form" className="col-12 find_us_form" onSubmit={this.handleSubmit.bind(this)}>
               <h2>LEAVE US A MESSAGE</h2>
               <div className="find_us_input">

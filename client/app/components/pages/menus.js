@@ -42,15 +42,15 @@ class Menus extends Component {
 
     return(
       <div>
-        <div className="menu_title s-iCol-10 iCol-8">
+        <div className="menu_title s-iCol-12 iCol-10">
           <div className="s-col-12 col-4">
             <div className="title_logo">
               <img className="mag_img" alt="2017" src={this.state.magzImg}/>
             </div>
           </div>
           <div className="s-col-12 col-4">
-            <h1 className="iCol-10 title_h1">MENU PAGE</h1>
-            <h2 className="iCol-10 title_h2">菜單</h2>
+            <h1 className="iCol-12 title_h1">MENU PAGE</h1>
+            <h2 className="iCol-12 title_h2">菜單</h2>
           </div>
           <div className="s-col-12 col-4">
             <div className="title_logo">
@@ -59,11 +59,11 @@ class Menus extends Component {
           </div>
         </div>
         <div className="col-12 text_center">
-          <p className="menu_text iCol-7 s-iCol-9">{this.state.text1}</p>
+          <p className="menu_text iCol-9 s-iCol-11">{this.state.text1}</p>
         </div>
 
         <div className="menu_box_container col-12 s-col-12">
-          <div className="menu_box s-col-12 iCol-5">
+          <div className="menu_box s-col-12 iCol-6">
             <div className="s-col-6 col-6 menu-thumb">
               <img
                 src={this.state.menuSet}
@@ -76,21 +76,25 @@ class Menus extends Component {
             </div>
           </div>
         </div>
+        <hr className="hr70"/>
 
         <div className="margin-10">
           <div className="col-12 new_arrival_box">
-            <div className="display-hide iCol-4"></div>
-            <div className="s-col-12 iCol-4 margin-padding">
+            <div className="s-col-12 col-4"><h2 className="s-iCol-12 iCol-10">NEW</h2></div>
+
+            <div className="s-col-12 col-4 margin-padding">
               <img className="s-image" alt="New Arrival" src={this.state.newArrImg}  />
             </div>
-            <div className="display-hide iCol-4"></div>
+
+            <div className="s-col-12 col-4"><h2 className="s-iCol-12 iCol-10">ARRIVAL</h2></div>
           </div>
         </div>
+
         <div className="margin-10">
-          <div className="s-col-12 col-3"><div className="iCol-8"><img alt="dish-1" src={this.state.dish1} /></div></div>
-          <div className="s-col-12 col-3"><div className="iCol-8"><img alt="dish-2" src={this.state.dish2} /></div></div>
-          <div className="s-col-12 col-3"><div className="iCol-8"><img alt="dish-3" src={this.state.dish3} /></div></div>
-          <div className="s-col-12 col-3"><div className="iCol-8"><img alt="dish-4" src={this.state.dish4} /></div></div>
+          <div className="s-col-12 col-3"><div className="iCol-10"><img alt="dish-1" src={this.state.dish1} /></div></div>
+          <div className="s-col-12 col-3"><div className="iCol-10"><img alt="dish-2" src={this.state.dish2} /></div></div>
+          <div className="s-col-12 col-3"><div className="iCol-10"><img alt="dish-3" src={this.state.dish3} /></div></div>
+          <div className="s-col-12 col-3"><div className="iCol-10"><img alt="dish-4" src={this.state.dish4} /></div></div>
         </div>
 
         {this.state.showPopup ?

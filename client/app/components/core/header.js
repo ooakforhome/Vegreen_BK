@@ -32,12 +32,12 @@ class Header extends Component {
     let menuClass = this.state.isClicked ? 'clicked' : '';
     return(
       <header className="page-top">
-        <div className="col-4 float-left">
+        <div className="s-col-6 col-4 float-left">
           <Link to="/">
             <img alt="Vegreen logo" src="https://image.ibb.co/kWFzx9/Ve_Green_Logo_update_Long.jpg" className="logo_image"/>
           </Link>
         </div>
-        <div className="col-8 float-left head-nav">
+        <div className="s-col-6 col-8 float-left head-nav">
           <i class="material-icons" onClick={this.toggleNav.bind(this)}>menu</i>
           <nav className="nav-container displayToggle">
             <ul>
