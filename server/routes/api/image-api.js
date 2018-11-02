@@ -1,16 +1,17 @@
-const path = require('path');
+// const path = require('path');
+// const express = require('express');
+// const bodyParser = require('body-parser');
+// const router = require('express').Router();
 const crypto = require('crypto');
 const multer = require('multer');
 const GridFsStorage = require('multer-gridfs-storage');
 const Grid = require('gridfs-stream');
-const express = require('express');
-const bodyParser = require('body-parser');
-// const router = require('express').Router();
 const axios = require('axios');
 const mongodb = require('mongodb');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const ImageModel = require('../../models/Image_model');
+const sharp = require('sharp')
 
 const config = require('../../../config/config');
 const mongoURI = config.db;
@@ -99,6 +100,32 @@ app.get('/api/image/:filename', (req, res) =>{
       // Read output to browser
       const readstream = gfs.createReadStream(file.filename);
       readstream.pipe(res);
+      } else {
+      res.status(404).json({
+        err: 'Not an image'
+      })
+    }
+  })
+});
+
+// convert small image by sharp
+app.get('/api/imagesm/:filename', (req, res) =>{
+  gfs.files.findOne({filename: req.params.filename}, (err, file) => {
+    if(!file || file.length === 0) {
+      return res.status(404).json({
+        err: 'No files exist'
+      });
+    }
+    // Check if image
+    if(file.contentType === 'image/png' || file.contentType === 'image/jpeg' || file.contentType === 'image/gif'){
+      // Read output to browser
+      var transformer = sharp()
+        .resize(300)
+        .on('info', function(info) {
+          console.log('Image height is ' + info.height);
+        });
+      const readstream = gfs.createReadStream(file.filename);
+      readstream.pipe(transformer).pipe(res);
       } else {
       res.status(404).json({
         err: 'Not an image'

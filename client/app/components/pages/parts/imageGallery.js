@@ -18,6 +18,7 @@ class ImageGallery extends Component {
   loadImageData=()=>{
     API.getImages()
       .then(res => {
+        console.log(res.data);
         this.setState({
           images: res.data
         })

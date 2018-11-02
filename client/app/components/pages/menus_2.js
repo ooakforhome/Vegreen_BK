@@ -10,8 +10,6 @@ class Menus extends Component {
       magzImg  : "/api/image/AtlMag.jpg",
       newArrImg: "/api/image/NewArrival.jpg",
       showPopup: false,
-      menuSet: "/api/image/Dinner-Menu-logo.jpg",
-      menuReg: "/api/image/Set-Menu-logo.jpg",
       menu1: "/api/image/menu1.JPG",
       menu2: "/api/image/menu2.JPG",
       menuSushi: "/api/image/menuSushi.JPG",
@@ -61,22 +59,36 @@ class Menus extends Component {
         <div className="col-12 text_center">
           <p className="menu_text iCol-7 s-iCol-9">{this.state.text1}</p>
         </div>
-
-        <div className="menu_box_container col-12 s-col-12">
-          <div className="menu_box s-col-12 iCol-5">
-            <div className="s-col-6 col-6 menu-thumb">
-              <img
-                src={this.state.menuSet}
-                alt="Set Menu" />
-            </div>
-            <div className="s-col-6 col-6 menu-thumb">
-              <img
-                src={this.state.menuReg}
-                alt="Regular Menu" />
-            </div>
+        <div className="menu_box">
+          <div className="s-col-6 col-3 menu-thumb">
+            <img
+              src={this.state.menu1}
+              alt={this.state.menu1L}
+              onClick={this.togglePopup.bind(this)}/>
+            <p>MENU 01</p>
+          </div>
+          <div className="s-col-6 col-3 menu-thumb">
+            <img
+              src={this.state.menu2}
+              alt={this.state.menu2L}
+              onClick={this.togglePopup.bind(this)}/>
+            <p>MENU 02</p>
+          </div>
+          <div className="s-col-6 col-3 menu-thumb">
+            <img
+              src={this.state.menuSushi}
+              alt={this.state.menuSushiL}
+              onClick={this.togglePopup.bind(this)}/>
+            <p>SUSHI MENU</p>
+          </div>
+          <div className="s-col-6 col-3 menu-thumb">
+            <img
+              src={this.state.menuLunch}
+              alt={this.state.menuLunchL}
+              onClick={this.togglePopup.bind(this)}/>
+            <p>LUNCH MENU</p>
           </div>
         </div>
-
         <div className="margin-10">
           <div className="col-12 new_arrival_box">
             <div className="display-hide iCol-4"></div>

@@ -4,14 +4,14 @@ class Footer extends Component {
   constructor(props){
     super(props);
       this.state={
-        fbLogo : "www.fb.com.jpg",
-        inLogo : "www.in.com.jpg",
-        gplusLogo : "www.gplus.com.jpg",
-        tweetLogo : "www.tweet.com.jpg",
-        fb : "www.fb.com",
-        in : "www.in.com",
+        fbLogo : "/api/image/fb-icon.png",
+        inLogo : "/api/image/in-icon.png",
+        gplusLogo : "/api/image/Gplus-icon.png",
+        tweetLogo : "/api/image/tw-icon.png",
+        fb : "https://www.facebook.com/vegreenfusion",
+        in : "https://www.instagram.com/vegreenfusion/",
         gplus : "www.gplus.com",
-        tweet : "www.tweet.com"
+        tweet : "https://twitter.com/vegreenfusion"
       }
   }
 
@@ -34,7 +34,7 @@ class Footer extends Component {
           </div>
           <p className="footer__copyright">© 2016 by VeGreen. Vegetarian Fusion Restaurant</p>
         </div>
-        <div className="col-4 float-left footer-mid"><p>.</p></div>
+        <div className="col-4 float-left footer-mid">.</div>
         <div className="col-4 s-col-6 float-left ">
           <div className="col-12 s-col-12 footer_p">
             <h2>HOURS:</h2>
@@ -48,7 +48,6 @@ class Footer extends Component {
               <li>Sun: 11AM to 9PM</li>
             </ul>
           </div>
-
         </div>
       </footer>
     )
