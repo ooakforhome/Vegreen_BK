@@ -82,6 +82,7 @@ $background-size: contain;
 .head-nav {
  position: relative;
  height: 100%;
+ font-family: 'Arbutus Slab', serif;
  .nav-container {
    position: absolute;
    bottom: 0px;
@@ -297,7 +298,7 @@ ul.ulul{    position: absolute;
     width: 100%;
     position: relative;
     top: 30vw;
-    z-index: 1;
+    z-index: 2;
     button.prev_img {
       padding: 20px 10px;
       opacity: .3;
@@ -329,7 +330,7 @@ ul.ulul{    position: absolute;
   width: 200px;
   position: absolute;
   background-color: white;
-  z-index: 1;
+  z-index: 2;
   right: 10px;
   top: 45vw;
 }
@@ -357,18 +358,26 @@ ul.ulul{    position: absolute;
 //=-=================================================
 
 @media only screen and (max-width: 480px){
-  .front_text .front_text_inner {
-    padding-left: 5vw;
-		h1 {
-			font-size: 1.5em;
+  .front_text{
+		position: unset;
+		.front_text_inner {
+			text-align: center;
+			h1 {
+				font-size: 1.5em;
+			}
+			h2 {
+				font-size: 1em;
+			}
+			p{
+				font-size: .8em;
+				color: black;
+				text-shadow: 0 0;
+				a:link, a:visited, a:hover, a:active {
+					color: none
+					}
+				}
+		  }
 		}
-		h2 {
-			font-size: 1em;
-		}
-		p{
-			font-size: .8em;
-		}
-  }
 }
 
 @media only screen and (max-width: 640px){
@@ -414,37 +423,42 @@ ul.ulul{    position: absolute;
 		height: 100%;
 
 		.nav-container {
-			position: absolute;
-			bottom: 0;
-			right: 50px;
-			top: 40px;
-			background-color: rgba(173,255,47,0.8);
-			border: 1px dotted rgba(0,0,0,.7);
-			height: 200px;
-			z-index: 1;
-
-			ul {
-				list-style: none;
-				padding: 0;
-				padding-top: 10px;
-				height: 100%;
-
-				li {
-					float: left;
-					width: 70%;
-					height: 25%;
-					margin-left: 15%;
-					text-align: center;
-
-					a {
-						margin-left: 0px;
-						float: none;
-					}
+		  background-color: none;
+		  border: 1px dotted rgba(0, 0, 0, 0.0);
+		  position: absolute;
+			width: 375px;
+		  top: 40px;
+		  height: 200px;
+		  z-index: 1;
+			font-family: 'Arbutus Slab', serif;
+		  ul {
+		    list-style: none;
+		    padding: 0;
+		    padding-top: 0px;
+		    height: 100%;
+		    li {
+		      float: left;
+		      width: 95%;
+		      height: 25%;
+		      margin-left: 0%;
+		      text-align: left;
+		      background-color: rgba(256,256,256,.9);
+		      border: 1px dotted black;
+		      font-size: 1.3em;
+		      padding: 10px 0 0 10px;
+		      a, a:link, a:visited, a:hover, a:active {
+		          text-decoration: none;
+		          margin-left: 0px;
+		          float: none;
+							color: black;
+		      }
+		    }
+				li:hover, li:active {
+					background-color: rgba(240, 240, 240, 1);
 				}
-			}
+		  }
 		}
 	}
-
 	.page-top { display: block; }
 	.logo_image { height: 100%; max-height: 100px; max-width: 200px;}
 
@@ -458,14 +472,12 @@ ul.ulul {
 	}
 ul.ulul .ulli {
 	float: none !important;
-	margin: auto !important;
 	height: 50% !important;
-	width: 90% !important;
+	font-size: .9em !important;
 	a {
 		position: absolute;
     width: 100%;
-    right: 0;
-    left: 0;
+
 	}
 }
 	.clicked { display: block;}
@@ -474,8 +486,8 @@ ul.ulul .ulli {
 
   .mission_p {padding: 10px;}
   .display-hide { display: none;}
-  .body_container { height: 120vw; }
-  .lunch_body {height:100vw;}
+  // .body_container { height: 120vw; }
+  .lunch_body {height:100vw; display:inline;}
   .ss-icon {width: 23%; float: left; margin: 0 1%;}
   .menu_text { font-size: .9em; }
   .g-font { font-size: 1.2em;}
