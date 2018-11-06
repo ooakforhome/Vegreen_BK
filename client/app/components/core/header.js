@@ -41,15 +41,15 @@ class Header extends Component {
           <i class="material-icons" onClick={this.toggleNav.bind(this)}>menu</i>
           <nav className="nav-container displayToggle">
             <ul>
-              <li className="header_link"><Link className="header_link" to="/">HOME</Link></li>
-              <li className="header_link showSub" onClick={this.toggleNavli.bind(this)}><Link className="header_link" to="/menu">MENUS 菜單</Link>
+              <li className="header_link" onClick={this.toggleNav.bind(this)}><Link className="linkLi header_link" to="/">HOME</Link></li>
+              <li className="header_link showSub" onClick={this.toggleNavli.bind(this)}><Link className="linkLi header_link" to="/menu">MENUS 菜單</Link>
                 <ul className="ulul displayToggleLG">
-                  <li className="ulli"><Link className="" to="/menu/lunch">LUNCH 中餐</Link></li>
-                  <li className="ulli"><Link className="" to="/menu/regular">REGULAR 菜單</Link></li>
+                  <li className="ulli" onClick={this.toggleNav.bind(this)}><Link className="linkLi" to="/menu/lunch">LUNCH 中餐</Link></li>
+                  <li className="ulli" onClick={this.toggleNav.bind(this)}><Link className="linkLi" to="/menu/regular">REGULAR 菜單</Link></li>
                 </ul>
               </li>
-              <li className="header_link"><Link className="header_link" to="/find-us">FIND US 找我們</Link></li>
-              <li className="header_link"><Link className="header_link" to="/mission">MISSION 使命</Link></li>
+              <li className="header_link" onClick={this.toggleNav.bind(this)}><Link className="linkLi header_link" to="/find-us">FIND US 找我們</Link></li>
+              <li className="header_link" onClick={this.toggleNav.bind(this)}><Link className="linkLi header_link" to="/mission">MISSION 使命</Link></li>
             </ul>
           </nav>
         </div>

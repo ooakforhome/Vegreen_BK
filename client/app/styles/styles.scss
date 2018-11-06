@@ -421,7 +421,6 @@ ul.ulul{    position: absolute;
 	.head-nav {
 		position: relative;
 		height: 100%;
-
 		.nav-container {
 		  background-color: none;
 		  border: 1px dotted rgba(0, 0, 0, 0.0);
@@ -429,7 +428,7 @@ ul.ulul{    position: absolute;
 			width: 375px;
 		  top: 40px;
 		  height: 200px;
-		  z-index: 1;
+		  z-index: 25;
 			font-family: 'Arbutus Slab', serif;
 		  ul {
 		    list-style: none;
@@ -437,6 +436,7 @@ ul.ulul{    position: absolute;
 		    padding-top: 0px;
 		    height: 100%;
 		    li {
+					position: relative;
 		      float: left;
 		      width: 95%;
 		      height: 25%;
@@ -449,19 +449,18 @@ ul.ulul{    position: absolute;
 		      a, a:link, a:visited, a:hover, a:active {
 		          text-decoration: none;
 		          margin-left: 0px;
-		          float: none;
 							color: black;
 		      }
 		    }
 				li:hover, li:active {
-					background-color: rgba(240, 240, 240, 1);
+					background-color: rgba(238, 255, 237, 0.9);
 				}
 		  }
 		}
 	}
 	.page-top { display: block; }
 	.logo_image { height: 100%; max-height: 100px; max-width: 200px;}
-
+	.linkLi {width: 100%; height: 100%;}
 ul.ulul {
 		position: absolute;
     margin: 20px 0 0 30px;
@@ -469,6 +468,7 @@ ul.ulul {
     background-color: rgba(256, 256, 256, 0.9);
     height: 75px !important;
     width: 70%;
+		z-index: 23;
 	}
 ul.ulul .ulli {
 	float: none !important;
